@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- Link to the CSS file -->
+</head>
+
+<body>
+    <h1>All Books</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Star Rating</th>
+                <th>Price ($)</th>
+                <th>Stock</th>
+                <th>Quantity</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(book => { %>
+                <tr>
+                    <td><%= book.Title %></td>
+                    <td><%= book.Book_category %></td>
+                    <td><%= book.Star_rating %></td>
+                    <td><%= book.Price.toFixed(2) %></td>
+                    <td><%= book.Stock %></td>
+                    <td><%= book.Quantity %></td>
+                    <td>
+                        <form action="/delete" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="<%= book._id %>">
+                            <button type="submit" class="delete">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <h2>Add a New Book</h2>
+    <form action="/addBook" method="post">
+        <input type="text" placeholder="Book Title" name="Title" required>
+        <input type="text" placeholder="Category" name="Book_category" required>
+        <input type="text" placeholder="Star Rating" name="Star_rating" required>
+        <input type="text" placeholder="Price" name="Price" required>
+        <input type="text" placeholder="Stock" name="Stock" required>
+        <input type="number" placeholder="Quantity" name="Quantity" required>
+        <button type="submit">Add Book</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Library Management System</p>
+    </footer>
+</body>
+
+</html>

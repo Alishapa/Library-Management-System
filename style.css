@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 30px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+/* Table Styles */
+table {
+    width: 90%;
+    max-width: 1000px; /* Max width for larger screens */
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease; /* Adding a smooth transition */
+}
+
+table th, table td {
+    padding: 15px; /* Increased padding for better spacing */
+    text-align: center;
+}
+
+table th {
+    background-color: #2980b9;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #dcdde1;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+table td {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px; /* Increased padding for better usability */
+    font-size: 14px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Added transition for button press */
+}
+
+button:hover {
+    background-color: #2ecc71;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+button.issue {
+    background-color: #e74c3c;
+}
+
+button.issue:hover {
+    background-color: #c0392b;
+}
+
+button.return {
+    background-color: #2980b9;
+}
+
+button.return:hover {
+    background-color: #3498db;
+}
+
+button.delete {
+    background-color: #c0392b;
+}
+
+button.delete:hover {
+    background-color: #e74c3c;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-wrap: wrap; /* Allow form elements to wrap on smaller screens */
+    justify-content: center;
+    margin: 20px auto;
+    width: 90%; /* Set width to 90% for better responsiveness */
+    max-width: 1000px; /* Max width for larger screens */
+}
+
+form input[type="text"],
+form input[type="number"] {
+    padding: 12px; /* Increased padding for better usability */
+    margin: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    width: calc(30% - 20px); /* Adjusted width for responsive layout */
+    font-size: 14px;
+}
+
+form button {
+    background-color: #2980b9;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #3498db;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 12px;
+    color: #95a5a6;
+}
